@@ -57,7 +57,7 @@ if __name__ == "__main__":
         if 'wikipedia' in query:
             speak('Searching Wikipedia...')
             query = query.replace("wikipedia", "")
-            results = wikipedia.summary(query,sentences=2)
+            results = wikipedia.summary(query,sentences=2)   #sentence used for how much line you want Luna to read 
             speak("According To wikipedia")
             print(results)
             speak(results)
@@ -93,6 +93,11 @@ if __name__ == "__main__":
                 speak("sorry , I am not able to send this email.")
         
         elif 'close' in query:
-            exit()
+            exit()              #to stop using you voice assistance otherwise it will keep listning
 
+            
+            #some time it show error as pyaudio is not install for that
+            #first step write-    pip install pipwin
+            # second step -       pipwin install pyaudio
+         
         
